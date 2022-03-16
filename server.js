@@ -17,9 +17,9 @@ app.use(morgan("tiny"));
 // app.use("/api/book/", bookRoute);
 
 app.get("/", (req, res) => {
-    res.json("hello world");
+    res.send("hello world");
 });
 
-app.listen(process.env.PORT, () =>
+app.listen(process.env.PORT || 5000, () =>
     console.log("server is running on port 2022..")
 );
