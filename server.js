@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
-const cors = require("cors");
-require("./config/db");
+// const cors = require("cors");
+// require("./config/db");
 require("dotenv").config();
 const app = express();
 
@@ -21,5 +21,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(process.env.PORT || 5000, () =>
-    console.log("server is running on port 2022..")
+    console.log(`server is running on port ${process.env.PORT}`)
 );
